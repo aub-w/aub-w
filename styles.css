@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.home{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+    margin: 50% auto;
+    font: 4.2em 'Righteous', cursive;
+    text-align: center;
+}
+
+nav>a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav>a:active {
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+  }
+  
+  @supports not(-webkit-text-stroke: 2px red) {
+    a:active {
+      text-shadow:
+        3px 3px 0 #ffffff,
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+    }
+  }
+
+#mainfooter{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 50px auto;
+    text-align: center;
+    color: #ed8a00;
+}
+
+@media (min-width: 45em){
+    .home{
+        flex-direction: row;
+        justify-content: center;
+        top: 0;
+        margin: 20% auto;
+    }
+
+    nav>a{
+        margin: 0 0.7em;
+    }
+
+    nav>a:hover{
+        color: #ed8a00;
+    }
+
+    
+    nav>a:active {
+        color: transparent;
+        -webkit-text-stroke: 2px #ffffff;
+      }
+      
+      li>a:hover {
+        color: transparent;
+        -webkit-text-stroke: 2px #ffbc47;
+      }
+      
+      @supports not(-webkit-text-stroke: 2px red) {
+        li>a:hover {
+          text-shadow:
+            3px 3px 0 #ffbc47,
+            -1px -1px 0 #ffbc47,
+            1px -1px 0 #ffbc47,
+            -1px 1px 0 #ffbc47,
+            1px 1px 0 #ffbc47;
+        }
+    }
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: .5em 0;
+    margin: .4em 0;
+    font: 2em 'Righteous', cursive;
+    border-bottom: 3px solid #ed8a00;
+}
+
+li{
+    margin: 0.2em;
+}
+
+li>a{
+    text-decoration: none;
+    color: #ffbc47;
+}
+
+a:active{
+    color:#ed8a00;
+}
+
+p{
+    font: 1em 'Lato', sans-serif;
+    color: #ed8a00;
+}
+
+.caption{
+    font: 0.85em 'Lato', sans-serif;
+    color: #ed8a00;
+    display: flex;
+    text-align: justify;
+    
+}
+
+header{
+    font: 1.3em 'Righteous', cursive;
+    color: #ed8a00;
+    text-align: center;
+}
+
+.skills{
+    font: 1em 'Righteous', cursive;
+    color: #ed8a00;
+    text-align: center;
+}
+
+.film, .about, .resume{
+    display:block;
+    max-width: 90%;
+    margin: auto;
+}
+
+main>p{
+    line-height: 1.5em;
+}
+
+.me{
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+
+.cv{
+    display: block;
+    width: 85%;
+    height: auto;
+    margin: auto;
+}
+
+.home-img{
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+@media (min-width: 45em){
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: .6em;
+    margin: .5em;
+    font: 2em 'Righteous', cursive;
+    
+}
+
+li{
+    margin: 0 1em;
+}
+
+li.logo {  margin-right: auto;}  
+
+.v1 {grid-area: v1;}
+.p1 {grid-area: p1;}
+.v2 {grid-area: v2;}
+.p2 {grid-area: p2;}
+
+.film{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'v1 v2'
+        'v3 v4'
+        'v5 v6'
+        'v7 v8';
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+  justify-content: center;
+  gap: 135px;
+}
+
+.about-main, .cv-main{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.about-main>p{
+    margin: 1em;
+   
+}
+
+.cv-main>div{
+    margin: 1em; 
+}
+
+.cv{
+    margin-right: 1em;
+}
+.me{
+    margin-right: 1em;
+}
+}
+
+#mainfooter>p{
+    font: 1em 'Righteous', cursive;
+}
+
+.cv {grid-area: cv;}
+.caption {grid-area: caption;}
+.list1 {grid-area: list1;}
+.list2 {grid-area: list2;}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+        'cv list1 list2'
+        'caption list1 list2';
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    gap: 1.7em;
+}
+
+
+
